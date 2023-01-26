@@ -1,165 +1,135 @@
-<!DOCTYPE html>
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="https://elfreds.com/static/Logo.png">
-    <style>
-      html {
-      }
-      body {
-        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="https://elfreds.com/static/elfreds.png">
+  <style>
+    html {}
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      border: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .boxed {
+      margin: 2em;
+      padding: 2em;
+      border-radius: 0.2em;
+      display: block;
+      vertical-align: top;
+    }
+
+    .boxed2 {
+      margin: 2em;
+      border-radius: 0.2em;
+      display: block;
+      vertical-align: top;
+    }
+
+    .large {
+      font-size: 3em;
+      font-weight: bold;
+    }
+
+    .team {
+      margin: 0.5em;
+      padding: 0.5em;
+      border-radius: 0.2em;
+      display: block;
+      vertical-align: top;
+      color: #FFF;
+    }
+
+    .work {
+      margin: 0.4em;
+      padding: 0.4em;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .other {
+      margin: 0.4em;
+      padding: 0.4em;
+      opacity: 0.6;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .planned {
+      margin: 0.4em;
+      padding: 0.4em;
+      display: none;
+      vertical-align: top;
+    }
+
+    .infobox {
+      border: 0;
+      padding: 1em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      align-content: flex-start
+    }
+
+    .teams {
+      border: 0;
+      padding: 2em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start
+    }
+
+    /* Portrait */
+    .banner {
+      border: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Big Landscape */
+    @media screen and (orientation:landscape) and (min-width: 48em) {
+      .banner {
         border: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
       }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      .boxed {
-        margin: 2em;
-        padding: 2em;
-        border-radius: 0.2em;
-        display: block;
-        vertical-align: top;
-        color: #000;
-      }
-      .team {
-        margin: 2em;
-        padding: 2em;
-        border-radius: 0.2em;
-        display: block;
-        vertical-align: top;
-        color: #FFF;
-      }
-      .work {
-        margin: 0.4em;
-        padding: 0.4em;
-        display: inline-block;
-        vertical-align: top;
-      }
-      .other {
-        margin: 0.4em;
-        padding: 0.4em;
-        display: none;
-        vertical-align: top;
-      }
-      .planned {
-        margin: 0.4em;
-        padding: 0.4em;
-        display: none;
-        vertical-align: top;
-      }
-      /* Portrait */
-         .teams {
-            border: 0;
-            display: none;
-            flex-direction: column;
-          }
-      /* Big Landscape */
-      @media screen and (orientation:landscape) and (min-width: 48em) {
-         .teams {
-            border: 0;
-            display: none;
-            flex-direction: row;
-          }
-      }      
-    </style>
-    <script>
-      function loadData() {
-        var dashbox = document.getElementById("dashed");
-        dashbox.style.display = "none";
-        var elements = document.getElementsByClassName("teams");
-        for (var i =0; i < elements.length; i++) {
-          elements[i].style.display = 'flex';
-        }
-      }
-      function unloadData() {
-        var dashbox = document.getElementById("dashed");
-        dashbox.style.display = "unset";
-        var elements = document.getElementsByClassName("teams");
-        for (var i =0; i < elements.length; i++) {
-          elements[i].style.display = 'none';
-        }
-      }
-    </script>
-      
-    <title>
-      Elfreds' Review
-    </title>
-  </head>
-  <body>
-    <script src="https://exyz.me/static/js/app.js" type="text/javascript" id="exyz-script" data-auth="2" data-position="se" data-init="loadData" data-exit="unloadData"></script>
-    <div class="boxed">
-      <h1>
-        <b>
-          <a href="/">Elfreds' Review</a>
-        </b>
-      </h1>
-      For the love of wisdom
+    }
+
+    .partb {
+      flex: 1;
+    }
+  </style>
+
+  <title>
+    Elfreds' Review
+  </title>
+</head>
+
+<body>
+
+  <div class="banner">
+
+    <div class="infobox partb">
+      <p align="justify" style="margin:1em; max-width:500px; font-size: 1.5em;"> At <a class=""
+          href="https://elfreds.com">Elfreds'</a>
+        Review, we turn information into intelligence. We delve deep to understand the world around us and use our
+        knowledge to solve problems and make informed decisions. Follow our public posts on <a
+          href="https://elfreds.substack.com/">Substack</a>.
+      </p>
     </div>
-      
-    <div id="dashed" class="boxed" style="border-style: dashed;">
-      <h4>
-        Ads! Ads! Ads!
-      </h4>
-      Log in with EXYZ to see the content.
-    </div>
-    
-    <div class="teams">
-    
-    <div class="team" style="background-color: MediumSeaGreen;">
-      <h4>
-        Content 1
-      </h4>
 
-      <div class="work">
-        ~ EXYZ allows readers to only pay as they use.
-      </div>
+  </div>
 
-      <div class="work">
-        ~ No charge if no use.
-      </div>
+</body>
 
-      <div class="work">
-        ~ Maximum charge of $6 per month per publication.
-      </div>
-     </div>
-      
-    <div class="team" style="background-color: DodgerBlue;">
-      <h4>
-        Content 2
-      </h4>
-
-      <div class="work">
-        ~ Just login, the charge is calculated on the go.
-      </div>
-
-      <div class="work">
-        ~ This allows more readers to adopt. 
-      </div>
-
-      <div class="work">
-        ~ This leads to growth in reader revenue.
-      </div>
-     </div>
-    
-    <div class="team" style="background-color: Tomato;">
-      <h4>
-        Content 3
-      </h4>
-
-      <div class="work">
-        ~ If you are an independent writer, visit <a href="https;//exyz.me">exyz.me</a> and start writing and earning.
-      </div>
-
-      <div class="work">
-        ~ For publishers, contact us to integrate it to your website.
-      </div>
-     </div>
-      
-    </div>
-    
-  
-
-</body></html>
+</html>
